@@ -1,0 +1,345 @@
+#organize the if conditionals and check for doubles
+Red = 0
+Yellow = 0
+Green = 0
+Blue = 0
+
+#Changed the variable names for better readability
+letter_A = "A"
+letter_B = "B"
+letter_C = "C"
+letter_D = "D"
+
+print("          Personality Test: Discover Your Dominant Personality Colour!          ")
+print("Welcome to the Personality Test!")
+print("Please answer the following questions by picking the letter that represents your choice A, B, C, or D.")
+print("Remember, there are no right or wrong answers, just be honest and have fun discovering your dominant personality colour!")
+print("Let's get started!")
+
+print("-" * 100)
+
+#Uses functions for each questions
+def Question1():
+    print("1. When starting a new project, what is your primary focus?")
+    print("  A. Getting immediate results and taking charge.")
+    print("  B. Building strong relationships and ensuring everyone is heard.")
+    print("  C. Keeping the atmosphere fun and light-hearted.")
+    print("  D. Organizing the details and creating a precise plan.")
+    return input().strip().upper()
+
+def Question2():
+    print("2. How do you usually handle a heated argument?")
+    print("  A. I try to crack a joke or change the subject to lighten the mood.")
+    print("  B. I use logic and facts to explain why I am right.")
+    print("  C. I face it head-on and try to win the point.")
+    print("  D. I try to keep the peace and might give in to avoid conflict.")
+    return input().strip().upper()
+
+def Question3():
+    print("3. Which of these best describes your workspace?")
+    print("  A. A bit messy, filled with colorful or cool items.")
+    print("  B. Highly organized, neat, and functional.")
+    print("  C. Cozy, with photos of family or friends.")
+    print("  D. Efficient and geared toward productivity.")
+    return input().strip().upper()
+
+def Question4():
+    print("4. What action do you find the most annoying and frustrating in others?")
+    print("  A. Boredom or overly strict rules.")
+    print("  B. Indecisiveness or moving too slowly.")
+    print("  C. Inaccuracy or lack of preparation.")
+    print("  D. Aggression or insensitivity.")
+    return input().strip().upper()
+
+def Question5():
+    print("5. In a social setting, you are most likely the one who:")
+    print("  A. Listens intently to others and offers support.")
+    print("  B. Observes the room and stays out of the spotlight.")
+    print("  C. Directs the group on where to go or what to do.")
+    print("  D. Tells the best stories and keeps people laughing.")
+    return input().strip().upper()
+
+def Question6():
+    print("6. How do you make important decisions?")
+    print("  A. Deliberately, after researching all the data.")
+    print("  B. Spontaneously, based on what feels exciting.")
+    print("  C. Slowly, making sure it doesn't hurt anyone's feelings.")
+    print("  D. Quickly, based on my gut and the bottom line.")
+    return input().strip().upper()
+
+def Question7():
+    print("7. What is your ultimate goal in a professional environment?")
+    print("  A. To achieve power, status, and measurable success.")
+    print("  B. To be liked, recognized, and enjoy the work.")
+    print("  C. To achieve perfection and master my craft.")
+    print("  D. To build meaningful relationships and help others.")
+    return input().strip().upper()
+
+def Question8():
+    print("8. If you were stranded on a deserted island, what would be your priority?")
+    print("  A. Building a shelter and finding a way to escape immediately.")
+    print("  B. Making sure everyone is staying calm and getting along.")
+    print("  C. Exploring the island to see what interesting things are there.")
+    print("  D. Mapping the terrain and rationing the supplies.")
+    return input().strip().upper()
+
+def Question9():
+    print("9. How do you react to sudden changes in plans?")
+    print("  A. I adapt quickly as long as we are still moving forward.")
+    print("  B. I feel slightly stressed but go along with the group.")
+    print("  C. I love it! Variety is the spice of life.")
+    print("  D. I find it frustrating because it disrupts my schedule.")
+    return input().strip().upper()
+
+def Question10():
+    print("10. Which word would your friends use to describe you most?")
+    print("  A. Enthusiastic")
+    print("  B. Reliable")
+    print("  C. Logical")
+    print("  D. Determined")
+    return input().strip().upper()
+
+#Asks the questions
+answer_1 = Question1()
+while answer_1 != letter_A and answer_1 != letter_B and answer_1 != letter_C and answer_1 != letter_D:
+    print("Invalid answer, type your answer again:")
+    answer_1 = input().strip().upper()
+
+if answer_1 == letter_A:
+    Red += 1
+elif answer_1 == letter_B:
+    Green += 1
+elif answer_1 == letter_C:
+    Yellow += 1
+elif answer_1 == letter_D:
+    Blue += 1
+
+answer_2 = Question2()
+while answer_2 != letter_A and answer_2 != letter_B and answer_2 != letter_C and answer_2 != letter_D:
+    print("Invalid answer, type your answer again:")
+    answer_2 = input().strip().upper()
+
+if answer_2 == letter_A:
+    Yellow += 1
+elif answer_2 == letter_B:
+    Blue += 1
+elif answer_2 == letter_C:
+    Red += 1
+elif answer_2 == letter_D:
+    Green += 1
+
+answer_3 = Question3()
+while answer_3 != letter_A and answer_3 != letter_B and answer_3 != letter_C and answer_3 != letter_D:
+    print("Invalid answer, type you answer again:")
+    answer_3 = input().strip().upper()
+
+if answer_3 == letter_A:
+    Yellow += 1
+elif answer_3 == letter_B:
+    Blue += 1
+elif answer_3 == letter_C:
+    Green += 1
+elif answer_3 == letter_D:
+    Red += 1
+
+answer_4 = Question4()
+while answer_4 != letter_A and answer_4 != letter_B and answer_4 != letter_C and answer_4 != letter_D:
+    print("Invalid answer, type your answer again:")
+    answer_4 = input().strip().upper()
+
+if answer_4 == letter_A:
+    Yellow += 1
+elif answer_4 == letter_B:
+    Red += 1
+elif answer_4 == letter_C:
+    Blue += 1
+elif answer_4 == letter_D:
+    Green += 1
+
+answer_5 = Question5()
+while answer_5 != letter_A and answer_5 != letter_B and answer_5 != letter_C and answer_5 != letter_D:
+    print("Invalid choice, please pick again:")
+    answer_5 = input().strip().upper()
+
+if answer_5 == letter_A:
+    Green += 1
+elif answer_5 == letter_B:
+    Blue += 1
+elif answer_5 == letter_C:
+    Red += 1
+elif answer_5 == letter_D:
+    Yellow += 1
+
+answer_6 = Question6()
+while answer_6 != letter_A and answer_6 != letter_B and answer_6 != letter_C and answer_6 != letter_D:
+    print("Invalid choice, please pick again:")
+    answer_6 = input().strip().upper()
+
+if answer_6 == letter_A:
+    Blue += 1
+elif answer_6 == letter_B:
+    Yellow += 1
+elif answer_6 == letter_C:
+    Green += 1
+elif answer_6 == letter_D:
+    Red += 1
+
+answer_7 = Question7()
+while answer_7 != letter_A and answer_7 != letter_B and answer_7 != letter_C and answer_7 != letter_D:
+    print("Invalid choice, please pick again:")
+    answer_7 = input().strip().upper()
+
+if answer_7 == letter_A:
+    Red += 1
+elif answer_7 == letter_B:
+    Yellow += 1
+elif answer_7 == letter_C:
+    Blue += 1
+elif answer_7 == letter_D:
+    Green += 1
+
+answer_8 = Question8()
+while answer_8 != letter_A and answer_8 != letter_B and answer_8 != letter_C and answer_8 != letter_D:
+    print("Invalid choice, plaese pick again:")
+    answer_8 = input().strip().upper()
+
+if answer_8 == letter_A:
+    Red += 1
+elif answer_8 == letter_B:
+    Green += 1
+elif answer_8 == letter_C:
+    Yellow += 1
+elif answer_8 == letter_D:
+    Blue += 1
+
+answer_9 = Question9()
+while answer_9 != letter_A and answer_9 != letter_B and answer_9 != letter_C and answer_9 != letter_D:
+    print("Invalid choice, please pick again:")
+    answer_9 = input().strip().upper()
+
+if answer_9 == letter_A:
+    Red += 1
+elif answer_9 == letter_B:
+    Green += 1 
+elif answer_9 == letter_C:
+    Yellow += 1
+elif answer_9 == letter_D:
+    Blue +=1
+
+answer_10 = Question10()
+while answer_10 != letter_A and answer_10 != letter_B and answer_10 != letter_C and answer_10 != letter_D:
+    print("Invalid choice please pick again:")
+    answer_10 = input().strip().upper()
+    
+if answer_10 == letter_A:
+    Yellow += 1
+elif answer_10 == letter_B:
+    Green += 1
+elif answer_10 == letter_C:
+    Blue += 1
+elif answer_10 == letter_D:
+    Red += 1
+
+
+winning_colour = max(Red, Green, Yellow, Blue)
+
+#printing the user's score for their dominant personality colour
+Red = Red % 10
+print("Your Red score is: " + str(Red))
+Green = Green % 10
+print("Your Green score is: " + str(Green))
+Yellow = Yellow % 10
+print("Your Yellow score is: " + str(Yellow))
+Blue = Blue % 10
+print("Your Blue score is: " + str(Blue))
+
+# Results
+if winning_colour == Red == Green == Yellow == Blue:#15
+    print("You have a tie between all four personality colours!")
+    print("All your colours are equally dominant, which means you have a very balanced personality with a wide range of strengths and weaknesses.")
+    print("You can adapt to different situations and connect with a variety of people, but you may also struggle with indecisiveness and trying to please everyone.")
+    print("Your colours are Red, Green, Yellow, and Blue.")
+
+elif winning_colour == Green == Yellow == Blue:#14
+    print("You have a tie between Green, Yellow, and Blue personalities!")
+    print("Your core motivations are Peace & Harmony, Optimism & Enthusiasm, and Perfection & Order.")
+    print("Strengths: Loyal, Patient, Good listener, Energetic, Optimistic,Persuasive, Detail-oriented, Analytical, Precise")
+    print("Weaknesses: Passive,Avoids conflict,Indecisive,Disorganized,Forgetful,Attention-seeking,Overly cautious,Resistant to change,Perfectionist")
+
+elif winning_colour == Red == Yellow == Blue:#13
+    print("You have a tie between Red, Yellow, and Blue personalities!")
+    print("Your core motivations are Power & Control, Optimism & Enthusiasm, and Perfection & Order.")
+    print("Strengths: Decisive, Assertive, Goal-oriented, Energetic, Optimistic, Persuasive, Detail-oriented, Analytical, Precise")
+    print("Weaknesses: Impatient, Blunt, Controlling, Disorganized, Forgetful, Attention-seeking, Overly cautious, Resistant to change, Perfectionist")
+
+elif winning_colour == Red == Green == Blue:#12
+    print("You have a tie between Red, Green, and Blue personalities!")
+    print("Your core motivations are Power & Control, Peace & Harmony, and Perfection & Order.")
+    print("Strengths: Decisive, Assertive, Goal-oriented, Loyal, Patient, Good listener, Detail-oriented, Analytical, Precise")
+    print("Weaknesses: Impatient, Blunt, Controlling, Passive, Avoids conflict, Indecisive, Overly cautious, Resistant to change, Perfectionist")
+
+elif winning_colour == Red == Green == Yellow:#11
+    print("You have a tie between Red, Green, and Yellow personalities!")
+    print("Your core motivations are Power & Control, Peace & Harmony, and Optimism & Enthusiasm.")
+    print("Strengths: Decisive, Assertive, Goal-oriented, Loyal, Patient, Good listener, Energetic, Optimistic, Persuasive")
+    print("Weaknesses: Impatient, Blunt, Controlling, Passive, Avoids conflict, Indecisive, Disorganized, Forgetful, Attention-seeking")
+
+elif winning_colour == Yellow == Blue:#10
+    print("You have a tie between Yellow and Blue personalities!")
+    print("Your core motivations are Optimism & Enthusiasm and Perfection & Order.")
+    print("Strengths: Energetic, Optimistic, Persuasive, Detail-oriented, Analytical, Precise")
+    print("Weaknesses: Disorganized, Forgetful, Attention-seeking, Overly cautious, Resistant to change, Perfectionist")
+
+elif winning_colour == Green == Blue:#9
+    print("You have a tie between Green and Blue personalities!")
+    print("Your core motivations are Peace & Harmony and Perfection & Order.")
+    print("Strengths: Loyal, Patient, Good listener, Detail-oriented, Analytical, Precise")
+    print("Weaknesses: Passive, Avoids conflict, Indecisive, Overly cautious, Resistant to change, Perfectionist")
+
+elif winning_colour == Green == Yellow:#8
+    print("You have a tie between Green and Yellow personalities!")
+    print("Your core motivations are Peace & Harmony and Optimism & Enthusiasm.")
+    print("Strengths: Loyal, Patient, Good listener, Energetic, Optimistic, Persuasive")
+    print("Weaknesses: Passive, Avoids conflict, Indecisive, Disorganized, Forgetful, Attention-seeking")
+
+elif winning_colour == Red == Blue:#7
+    print("Your have a tie between Blue and Red personalities!")
+    print("Your core motivations are Power & Control and Perfection & Order.")
+    print("Strengths: Decisive, Assertive, Goal-oriented, Detail-oriented, Analytical, Precise")
+    print("Weaknesses: Impatient, Blunt, Controlling, Overly cautious, Resistant to change, Perfectionist")
+
+elif winning_colour == Red == Yellow:#6
+    print("You have a tie between Red and Yellow personalities!")
+    print("Your core motivations are Power & Control and Optimism & Enthusiasm.")
+    print("Strengths: Decisive, Assertive, Goal-oriented, Energetic, Optimistic, Persuasive")
+    print("Weaknesses: Impatient, Blunt, Controlling, Disorganized, Forgetful, Attention-seeking")
+
+elif winning_colour == Red == Green:#5
+    print("You have a tie between Red and Green personalities!")
+    print("Your core motivations are Power & Control and Peace & Harmony.")
+    print("Strengths: Decisive, Assertive, Goal-oriented, Loyal, Patient, Good listener")
+    print("Weaknesses: Impatient, Blunt, Controlling, Passive, Avoids conflict, Indecisive")
+
+elif winning_colour == Blue:#4
+    print("Your dominant personality colour is Blue.")
+    print("Your core motivation is Perfection & Order.")
+    print("Strengths: Detail-oriented, Analytical, Precise")
+    print("Weaknesses: Overly cautious, Resistant to change, Perfectionist")
+
+elif winning_colour == Yellow:#3
+    print("Your dominant personality colour is Yellow.")
+    print("Your core motivation is Optimism & Enthusiasm.")
+    print("Strengths: Energetic, Optimistic, Persuasive")
+    print("Weaknesses: Disorganized, Forgetful, Attention-seeking")
+
+elif winning_colour == Green:#2
+    print("Your dominant personality colour is Green.")
+    print("Your core motivation is Peace & Harmony.")
+    print("Strengths: Loyal, Patient, Good listener")
+    print("Weaknesses: Passive, Avoids conflict, Indecisive")
+
+elif winning_colour == Red:#1
+    print("Your dominant personality colour is Red.")
+    print("Your core motivation is Power & Control.")
+    print("Strengths: Decisive, Assertive, Goal-oriented")
+    print("Weaknesses: Impatient, Blunt, Controlling")
